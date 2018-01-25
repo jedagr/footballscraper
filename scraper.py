@@ -10,8 +10,8 @@ html = scraperwiki.scrape("http://www.boxofficemojo.com/studio/?view=company&vie
 record = {}
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
-names = root.cssselect("tbody div")
-#
+names = root.cssselect("td a")
+##page_team_1_block_team_squad_8-table > tbody:nth-child(4) > tr:nth-child(3) > td:nth-child(4) > div:nth-child(1) > a
 for name in names:
   #print name.text
   print name.attrib["href"]
