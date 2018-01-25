@@ -5,12 +5,12 @@ import scraperwiki
 import lxml.html
 #
 # # Read in a page
-html = scraperwiki.scrape("https://uk.soccerway.com/teams/england/chelsea-football-club/661/")
+html = scraperwiki.scrape("http://www.boxofficemojo.com/studio/?view=company&view2=yearly&yr=2017&p=.htm")
 # creates an empty dictionary variable to hold data
 record = {}
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
-names = root.cssselect("td div a")
+names = root.cssselect("tbody div")
 #
 for name in names:
   #print name.text
