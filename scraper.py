@@ -5,7 +5,7 @@ import scraperwiki
 import lxml.html
 #
 # # Read in a page
-html = scraperwiki.scrape("http://www.boxofficemojo.com/studio/?view=company&view2=yearly&yr=2017&p=.htm")
+html = scraperwiki.scrape("https://uk.soccerway.com/teams/england/chelsea-football-club/661/")
 # creates an empty dictionary variable to hold data
 record = {}
 # # Find something on the page using css selectors
